@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}">
+    <title>Cadastrar</title>
+</head>
+<body>
+<div class="container">
+    <div class="'page-header">
+        <h1>{{titulo|title}}</h1>
+    </div>
+
+    <form action="/salvar" method="post">
+
+        <div class="form-group mb-3">
+            <label for="id">Código</label>
+            <input type="text" id="id" name="id" class="form-control" readonly>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="descricacao">Descrição</label>
+            <input type="text" id="descricacao" name="descricao" class="form-control" required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="preco">Preço unitário</label>
+            <input type="text" id="preco" name="preco" class="form-control"required>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="quantidade">Quantidade em estoque</label>
+            <input type="text" id="quantidade" name="quantidade" class="form-control"required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top:10px">Salvar</button>
+    </form>
+
+</div>
+
+
+</body>
+</html>

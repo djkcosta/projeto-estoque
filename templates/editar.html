@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap.css')}}">
+    <title>Editar</title>
+</head>
+
+<body>
+
+</body>
+
+<div class="container">
+    <div class="page=header">
+        <h1>{{titulo|title}}</h1>
+    </div>
+
+    <form action="{{url_for('salvar')}}"method="post">
+        <div class="form-group">
+            <label>Código</label>
+            <input type="text" name="id" value="{{produto.id}}" class="form-control" readonly>
+
+            <div class="form-group mt-3">
+                <label>Descrição</label>
+                <input type="text" name="descricao" value="{{produto.descricao}}" class="form-control" required>
+            </div>
+            <div class="form-group mt-3">
+                <label>Preço</label>
+                <input type="text" name="preco" value="{{produto.preco}}" class="form-control" required>
+            </div>
+
+            <div class="form-group mt-3">
+                <label>Quantidade</label>
+                <input type="text" name="quantidade" value="{{produto.quantidade}}" class="form-control" required>
+            </div>
+
+            <br>
+            <button type="submit"class="btn btn-primary ">Salvar</button>
+            <a href="{{url_for('inicio')}}" class="btn btn-danger">Voltar</a>
+
+
+    </form>
+
+</div>
+
+<html/>
