@@ -1,10 +1,12 @@
-# projeto-estoque
+# Projeto Estoque
 
 CRUD em python 🐍
+- Adiciona, Atualiza e Remove Produtos.
 
 # 🛠️Tecnologias Utilizadas
 - PYTHON
 - HTML
 - CSS
 - JAVASCRIPT
-- SQL
+- SQLite
+- FLASK
